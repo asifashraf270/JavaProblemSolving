@@ -43,4 +43,29 @@ public class BinarySearch {
             return binarySearch(arr,0,pivot-1,key);
         return binarySearch(arr,pivot+1,n-1,key);
     }
+
+    public int searchingImprovedVersion(int[] arr,int l,int h,int key)
+    {
+        if (l > h)
+            return -1;
+
+        int mid = (l + h) / 2;
+        if (arr[mid] == key)
+            return mid;
+
+
+        if (arr[l] <= arr[mid]) {
+
+            if (key >= arr[l] && key <= arr[mid])
+                return searchingImprovedVersion(arr, l, mid - 1, key);
+
+            return searchingImprovedVersion(arr, mid + 1, h, key);
+        }
+
+
+        if (key >= arr[mid] && key <= arr[h])
+            return searchingImprovedVersion(arr, mid + 1, h, key);
+
+        return searchingImprovedVersion(arr, l, mid - 1, key);
+    }
 }
