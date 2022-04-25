@@ -7,10 +7,11 @@ public class Main {
     private static final String TAG = "Main";
 
     public static void main(String[] args) {
-       int[] arr={8,3,1,2};
-       int n=arr.length;
-       MaximumArraySum arraySum=new MaximumArraySum();
-       System.out.println(arraySum.maxSumAmountRotation(arr));
+        int arr1[] = { 5, 6, 1, 2, 3, 4 };
+        FindMinimumRotatedArray rotatedArray = new FindMinimumRotatedArray();
+        int length = arr1.length;
+        System.out.println(rotatedArray.findMinInduplicate(arr1,0,length-1));
     }
+
 
 }
