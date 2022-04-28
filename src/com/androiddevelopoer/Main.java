@@ -1,16 +1,21 @@
 package com.androiddevelopoer;
 
 import com.androiddevelopoer.Arrays.*;
-import jdk.nashorn.internal.ir.Block;
 
 public class Main {
     private static final String TAG = "Main";
 
     public static void main(String[] args) {
-      int [] arr={1,4,1};
+      int [] arr={1,3,5,7,9};
       int n=arr.length;
-      FindMaxHammingDistance distance=new FindMaxHammingDistance();
-      System.out.println(distance.maxHamming(arr,n));
+      int k=2;
+      PrintLeftRotation rotation=new PrintLeftRotation();
+      rotation.leftRotate(arr,n,k);
+      k=3;
+      rotation.leftRotate(arr,n,k);
+      k=4;
+      rotation.leftRotate(arr,n,k);
+
      }
 
 
