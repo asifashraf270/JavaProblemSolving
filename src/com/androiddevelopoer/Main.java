@@ -6,17 +6,13 @@ public class Main {
     private static final String TAG = "Main";
 
     public static void main(String[] args) {
-      int [] arr={1,3,5,7,9};
-      int n=arr.length;
-      int k=2;
-      PrintLeftRotation rotation=new PrintLeftRotation();
-      rotation.leftRotate(arr,n,k);
-      k=3;
-      rotation.leftRotate(arr,n,k);
-      k=4;
-      rotation.leftRotate(arr,n,k);
-
-     }
+        int[] arr = {1, 2, 3, 4, 5};
+        int rotations = 2;
+        int[][] ranges = {{0, 2}, {0, 3}};
+        int index = 1;
+        FindElementAfterRotation rotation = new FindElementAfterRotation();
+        System.out.println(rotation.findElement(arr, ranges, rotations, index));
 
 
+    }
 }
