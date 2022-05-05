@@ -4,7 +4,7 @@ public class LowHighIndex {
 
     public void findLowestHighestIndex(int[] arr,int key)
     {
-        int loestIndex=arr.length-1;
+        int lowestIndex=arr.length-1;
         int highestIndex=0;
         for (int i=0;i<arr.length;i++)
         {
